@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>GitQuest — Master Git & GitHub</title>
+    <meta name="description" content="GitQuest — Interactive gamified Git & GitHub bootcamp for absolute beginners." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬡</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="top-bar">
+        <div id="brand">
+          <span class="brand-hex">⬡</span>
+          <span class="brand-name">GitQuest</span>
+          <span class="brand-sep">|</span>
+          <span class="brand-sub">Git &amp; GitHub Bootcamp</span>
+        </div>
+        <div id="player-hud">
+          <div id="level-chip">
+            <span id="level-emoji">🌱</span>
+            <span id="level-label">Beginner</span>
+          </div>
+          <div id="xp-pill">
+            <div id="xp-track"><div id="xp-fill"></div></div>
+            <span id="xp-text">0 XP</span>
+          </div>
+          <div id="streak-chip" title="Day streak">🔥 <span id="streak-num">0</span></div>
+        </div>
+      </header>
+
+      <div id="main-layout">
+        <aside id="sidebar">
+          <div id="sidebar-top">
+            <div id="course-progress-label">Course Progress</div>
+            <div id="course-bar"><div id="course-fill"></div></div>
+            <div id="course-stats"><span id="done-count">0</span> / 31 lessons complete</div>
+          </div>
+          <nav id="module-list"></nav>
+        </aside>
+
+        <main id="content-panel">
+          <div id="lesson-container"></div>
+        </main>
+      </div>
+
+      <div id="achievement-toast" aria-live="polite">
+        <div id="achievement-body">
+          <div id="ach-icon">🏆</div>
+          <div id="ach-text">
+            <div id="ach-title">Achievement Unlocked!</div>
+            <div id="ach-desc"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="xp-float">+<span id="xp-float-val">0</span> XP</div>
+      <canvas id="confetti"></canvas>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
